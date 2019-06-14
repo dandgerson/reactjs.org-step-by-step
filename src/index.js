@@ -5,10 +5,16 @@ import './index.css';
 
 import App from './App';
 
+const user = {
+  firstName: 'Dmitry G.',
+  lastName: 'Anderson',
+  avatarURL: './img/portrait.jpg',
+};
+
 // ====================================
 
 ReactDOM.render(
-  <App />,
+  <App user={user} />,
   document.getElementById('root')
 );
 
