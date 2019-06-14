@@ -80,7 +80,7 @@ function UserInfo(props) {
     <div className="UserInfo">
       <Avatar user={props.user} />
       <div className="UserInfo-name">
-        {props.user.firstName + ' ' + props.user.lastName}
+        <span className="impressive-text">{props.user.firstName + ' ' + props.user.lastName}</span>
       </div>
     </div>
   );
