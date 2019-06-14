@@ -17,3 +17,9 @@ body {
 .impressive-text {
   color: var(--impressive-text-color);
 }
+
+.user-avatar {
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}

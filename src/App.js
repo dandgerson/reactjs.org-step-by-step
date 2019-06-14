@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Clock from './Clock';
+
 export default class App extends React.Component {
 
   formatName(user) {
@@ -9,9 +11,9 @@ export default class App extends React.Component {
   getGreeting(user) {
     if (user) {
       return (
-        <div>
+        <div className="greetings">
           <h1>Hello, <span className="impressive-text">{this.formatName(user)}</span>!</h1>
-          <img alt="user avatar" src={user.avatarURL}></img>
+          <img className="user-avatar" alt="user avatar" src={user.avatarURL} />
         </div>
       );
     }
@@ -19,6 +21,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    return this.getGreeting(this.props.user);
+    return (
+      <div className="app">
+        {this.getGreeting(this.props.user)}
+        <Clock />
+      </div>
+    );
   }
 }
