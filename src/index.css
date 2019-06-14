@@ -1,0 +1,19 @@
+:root {
+  /*text colors */
+  --main-text-color: #A5A5A5;
+  --impressive-text-color: #5DB0D7;
+  /* backround colors */
+  --main-backround-color: #2A2A2A;
+}
+
+* {
+  color: var(--main-text-color);
+}
+
+body {
+  background-color: var(--main-backround-color);
+}
+
+.impressive-text {
+  color: var(--impressive-text-color);
+}
