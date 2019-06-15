@@ -16,9 +16,10 @@ const user = {
 
 // ====================================
 
-setInterval(() => ReactDOM.render(
+ReactDOM.render(
   <App user={user} />,
-  document.getElementById('root')), 1000);
+  document.getElementById('root')
+);
 
 // ====================================
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Clock from './Clock';
 
 export default class App extends React.Component {
@@ -26,6 +27,7 @@ export default class App extends React.Component {
 
     return (
       <div className="app">
+        <Clock />
         {this.getGreeting(this.props.user)}
 
         <Clock />
