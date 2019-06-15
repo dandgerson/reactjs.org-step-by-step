@@ -1,9 +1,14 @@
 :root {
   /*text colors */
   --main-text-color: #A5A5A5;
+  --warning-text-color: #FFDD9E;
   --impressive-text-color: #5DB0D7;
+  /* border colors */
+  --impressive-border-color: #5DB0D7;
+  --warning-border-color: #645300;
   /* backround colors */
   --main-backround-color: #2A2A2A;
+  --warning-backround-color: #332B00;
 }
 
 * {
@@ -29,18 +34,25 @@ body {
   display: flex;
 }
 
-.toggle {
+button {
   display: block;
-  width: 50px;
+  min-width: 50px;
   font-weight: bold;
   outline: none;
   border: 2px solid var(--main-text-color);
   color: var(--main-text-color);
 }
-.toggle:focus {
-  outline: none;
-}
-.toggle.on {
-  border: 2px solid var(--impressive-text-color);
+
+button.pressed {
+  border: 2px solid var(--impressive-border-color);
   color: var(--impressive-text-color)
+}
+
+.warning {
+  padding: 5px;
+  font-weight: bold;
+  color: var(--warning-text-color);
+  background-color: var(--warning-backround-color);
+  border: 2px solid var(--warning-border-color);
+  border-radius: 5px;
 }
