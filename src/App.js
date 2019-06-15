@@ -2,6 +2,7 @@ import React from 'react';
 
 // components
 import Clock from './Clock';
+import Toggle from './Toggle';
 
 export default class App extends React.Component {
 
@@ -28,6 +29,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <Clock />
+        <Toggle />
         {this.getGreeting(this.props.user)}
 
         <Clock />
