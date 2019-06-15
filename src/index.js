@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import avatarURL from './img/portrait.jpg';
 
-import App from './App';
+import App from './components/App';
 
 const user = {
   firstName: 'Dmitry G.',
