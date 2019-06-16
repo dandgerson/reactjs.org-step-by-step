@@ -76,3 +76,9 @@ button.pressed {
 .hidden {
   display: none;
 }
+
+.comments-list {
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+}

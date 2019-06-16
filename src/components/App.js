@@ -4,7 +4,7 @@ import React from 'react';
 import LoginControl from './LoginControl';
 import Clock from './Clock';
 import Page from './Page'
-import CommentContainer from './CommentContainer';
+import CommentsList from './CommentsList';
 
 class App extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class App extends React.Component {
         </header>
         <main>
           <Page />
-          <CommentContainer users={this.props.users} />
+          <CommentsList users={this.props.users} />
         </main>
       </div>
     );

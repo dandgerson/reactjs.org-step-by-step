@@ -34,24 +34,32 @@ function UserInfo(props) {
   );
 }
 
-function formateDate(date) {
-  return date.toLocaleString('ru');
-}
-
-function CommentContainer(props) {
-  const comments = props.users.map((user, index) => {
-    return <Comment
-      key={index}
-      author={user}
-      text={user.text}
-      date={user.date}
-    />
+function CommentsList(props) {
+  const commentsItems = props.users.map((user, index) => {
+    return (
+      <li key={index} >
+        <Comment
+          author={user}
+          text={user.text}
+          date={user.date}
+        />
+      </li>
+    );
   });
   return (
-    <div className="comments-container">
-      {comments}
+    <div>
+      <h2>Comments List</h2>
+      <ul className="comments-list">
+        {commentsItems}
+      </ul>
     </div>
   )
 }
 
-export default CommentContainer;
+export default CommentsList;
+
+// helpers
+
+function formateDate(date) {
+  return date.toLocaleString('ru');
+}
