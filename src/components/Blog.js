@@ -23,23 +23,23 @@ function Blog(props) {
     </ul>
   );
 
-  const content = props.posts.map(post => (
-      <Post
-        key={post.id}
-        id={post.id}
-        post={post} />
-  ));
-
   return (
     <div className="blog">
       <div className="sidebar">
         <h2>Sidebar</h2>
-        {sidebar}
+        <ul>
+          {sidebar}
+        </ul>
       </div>
       <hr />
       <div>
         <h2>Posts</h2>
-        {content}
+        {props.posts.map(post => (
+          <Post
+            key={post.id}
+            id={post.id}
+            post={post} />)
+        )}
       </div>
     </div>
   );
