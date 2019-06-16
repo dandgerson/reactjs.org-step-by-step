@@ -1,5 +1,7 @@
 import React from 'react';
 
+import shortid from 'shortid';
+
 function Comment(props) {
   return (
     <div className="Comment">
@@ -37,7 +39,7 @@ function UserInfo(props) {
 function CommentsList(props) {
   const commentsItems = props.users.map((user, index) => {
     return (
-      <li key={index} >
+      <li key={shortid.generate()} >
         <Comment
           author={user}
           text={user.text}
@@ -53,7 +55,7 @@ function CommentsList(props) {
         {commentsItems}
       </ul>
     </div>
-  )
+  );
 }
 
 export default CommentsList;

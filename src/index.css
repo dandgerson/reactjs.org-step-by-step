@@ -82,3 +82,10 @@ button.pressed {
   padding-top: 20px;
   margin: 0;
 }
+
+.comments-list li {
+  padding-bottom: 20px;
+}
+.comments-list li:last-child {
+  padding-bottom: 0;
+}
