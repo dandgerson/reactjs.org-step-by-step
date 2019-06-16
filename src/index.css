@@ -23,15 +23,31 @@ body {
   color: var(--impressive-text-color);
 }
 
-.user-avatar,
-.author-avatar {
-  height: 150px;
+.user-avatar {
+  height: 100px;
   display: block;
-  margin: 0 auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.greetings {
+  display: flex;
+  text-align: center;
 }
 
 .Comment {
   display: flex;
+}
+
+.Comment .author-avatar {
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.Comment .UserInfo-name {
+  text-align: center;
 }
 
 button {

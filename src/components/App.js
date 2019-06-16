@@ -6,21 +6,7 @@ import LoginControl from './LoginControl';
 import Page from './Page'
 
 // function Component
-function Greeting(props) {
-  if (props.user) {
-    return (
-      <div className="greetings">
-        <h1>Hello, <span className="impressive-text">{formatName(props.user)}</span>!</h1>
-        <img className="user-avatar" alt="user avatar" src={props.user.avatarURL} />
-      </div>
-    );
-  }
-  return <h1>Hello, <span className="impressive-text">Stranger</span>!</h1>
-}
 
-function Welcome(props) {
-  return <Greeting user={props.user} />
-}
 
 function Comment(props) {
   return (
@@ -56,10 +42,6 @@ function UserInfo(props) {
   );
 }
 
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
-
 function formateDate(date) {
   return date.toLocaleString('ru');
 }
@@ -69,19 +51,25 @@ class App extends React.Component {
   
 
   render() {
+
+    const comments = this.props.users.map((user, index) => {
+      return <Comment
+        key={index}
+        author={user}
+        text={user.text}
+        date={user.date}
+      />
+    })
+
     return (
       <div className="app">
-        <LoginControl />
+        <LoginControl user={this.props.users[0]}/>
         <Clock />
         <Page />
 
-        <Welcome user={this.props.user} />
-
-        <Comment
-          author={this.props.user}
-          text={this.props.user.text}
-          date={this.props.user.date}
-        />
+        <div className="comments-container">
+          {comments}
+        </div>
       </div>
     );
   }
