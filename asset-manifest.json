@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reactjs.org-step-by-step/static/css/main.53676eaf.chunk.css",
+    "main.js": "/reactjs.org-step-by-step/static/js/main.567856b0.chunk.js",
+    "main.js.map": "/reactjs.org-step-by-step/static/js/main.567856b0.chunk.js.map",
+    "runtime~main.js": "/reactjs.org-step-by-step/static/js/runtime~main.e095d52c.js",
+    "runtime~main.js.map": "/reactjs.org-step-by-step/static/js/runtime~main.e095d52c.js.map",
+    "static/js/2.cfdf7a9f.chunk.js": "/reactjs.org-step-by-step/static/js/2.cfdf7a9f.chunk.js",
+    "static/js/2.cfdf7a9f.chunk.js.map": "/reactjs.org-step-by-step/static/js/2.cfdf7a9f.chunk.js.map",
+    "index.html": "/reactjs.org-step-by-step/index.html",
+    "precache-manifest.c5c4c75ad078d56ea391db759c82d736.js": "/reactjs.org-step-by-step/precache-manifest.c5c4c75ad078d56ea391db759c82d736.js",
+    "service-worker.js": "/reactjs.org-step-by-step/service-worker.js",
+    "static/css/main.53676eaf.chunk.css.map": "/reactjs.org-step-by-step/static/css/main.53676eaf.chunk.css.map"
+  }
+}
