@@ -2,7 +2,7 @@ import React from 'react';
 
 function Toggle(props) {
   return (
-    <button className="toggle" onClick={props.onClick}>
+    <button className={props.isToggleOn ? 'toggle' : 'toggle pressed'} onClick={props.onClick}>
       {props.isToggleOn ? 'ON' : 'OFF'}
     </button>
   );

@@ -27,11 +27,9 @@ class Clock extends React.Component {
 
   handleClick = (e) => {
     this.setState(state => ({show: !state.show}));
-    e.target.parentElement
-      .querySelector('.clock')
-      .classList.toggle('hidden');
 
-    e.target.classList.toggle('pressed');
+    const DOMclock = e.target.parentElement.querySelector('.clock');
+    DOMclock.hidden = !DOMclock.hidden;
   }
 
   render() {
@@ -39,8 +37,9 @@ class Clock extends React.Component {
       <div>
         <Toggle
           isToggleOn={this.state.show}
-          onClick={this.handleClick} />
-          <span className="clock">{this.state.date.toLocaleTimeString('ru')}</span>
+          onClick={this.handleClick}
+        />
+        <span className="clock">{this.state.date.toLocaleTimeString('ru')}</span>
       </div>
     );
   }
