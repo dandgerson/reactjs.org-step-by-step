@@ -32,7 +32,7 @@ export default class Page extends React.Component {
         <button onClick={this.handleToggleClick}>
           {this.state.showWarning ? 'Hide' : 'Show'}
         </button>
-        <WarningBanner warn={this.state.showWarning} />
+        <WarningBanner warn={this.state.showWarning}/>
       </div>
     );
   }

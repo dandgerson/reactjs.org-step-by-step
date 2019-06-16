@@ -27,8 +27,7 @@ function Blog(props) {
       <Post
         key={post.id}
         id={post.id}
-        post={post}
-      />
+        post={post} />
   ));
 
   return (
