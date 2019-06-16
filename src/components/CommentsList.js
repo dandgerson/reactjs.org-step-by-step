@@ -34,17 +34,21 @@ function UserInfo(props) {
   );
 }
 
+function CommentItem(props) {
+  return (
+    <li>
+      <Comment
+          author={props.user}
+          text={props.user.text}
+          date={props.user.date}
+        />
+    </li>
+  );
+}
+
 function CommentsList(props) {
   const commentsItems = props.users.map((user, index) => {
-    return (
-      <li key={index} >
-        <Comment
-          author={user}
-          text={user.text}
-          date={user.date}
-        />
-      </li>
-    );
+    return <CommentItem key={index} user={user} />;
   });
   return (
     <div>
