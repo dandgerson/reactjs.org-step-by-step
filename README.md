@@ -1,3 +1,12 @@
+# Step by step app
+
+- [ ] - User can Register in the App
+- [ ] - after it User can Login in the App
+- in login state User can:
+  - [ ] - write and add Posts
+  - [ ] - write Comments on other Posts
+  - [ ] - delete own Posts
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
