@@ -4,6 +4,7 @@ import React from 'react';
 import LoginControl from './LoginControl';
 import Clock from './Clock';
 import Page from './Page'
+import Blog from './Blog';
 import CommentsList from './CommentsList';
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
         </header>
         <main>
           <Page />
+          <Blog posts={this.props.posts}/>
           <CommentsList users={this.props.users} />
         </main>
       </div>

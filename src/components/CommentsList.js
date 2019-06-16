@@ -1,4 +1,6 @@
 import React from 'react';
+import * as helpers from '../helpers';
+
 
 function Comment(props) {
   return (
@@ -8,7 +10,7 @@ function Comment(props) {
         {props.text}
       </div>
       <div className="Comment-date">
-        {formateDate(props.date)}
+        {helpers.formateDate(props.date)}
       </div>
     </div>
   );
@@ -62,8 +64,4 @@ function CommentsList(props) {
 
 export default CommentsList;
 
-// helpers
 
-function formateDate(date) {
-  return date.toLocaleString('ru');
-}

@@ -15,6 +15,10 @@
   color: var(--main-text-color);
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   background-color: var(--main-backround-color);
 }
@@ -88,4 +92,13 @@ button.pressed {
 }
 .comments-list li:last-child {
   padding-bottom: 0;
+}
+
+.blog .sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+.blog .sidebar li {
+  padding: 0;
+  padding-bottom: 10px;
 }
