@@ -2,15 +2,24 @@ import React from 'react';
 
 // components
 import Clock from './Clock';
-import Toggle from './Toggle';
 import LoginControl from './LoginControl';
 import Page from './Page'
 
 // function Component
-
+function Greeting(props) {
+  if (props.user) {
+    return (
+      <div className="greetings">
+        <h1>Hello, <span className="impressive-text">{formatName(props.user)}</span>!</h1>
+        <img className="user-avatar" alt="user avatar" src={props.user.avatarURL} />
+      </div>
+    );
+  }
+  return <h1>Hello, <span className="impressive-text">Stranger</span>!</h1>
+}
 
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>
+  return <Greeting user={props.user} />
 }
 
 function Comment(props) {
@@ -47,73 +56,26 @@ function UserInfo(props) {
   );
 }
 
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
 function formateDate(date) {
   return date.toLocaleString('ru');
 }
 
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showClock: false,
-    };
-  }
-
-  formatName(user) {
-    return user.firstName + ' ' + user.lastName;
-  }
-
-  getGreeting(user) {
-    if (user) {
-      return (
-        <div className="greetings">
-          <h1>Hello, <span className="impressive-text">{this.formatName(user)}</span>!</h1>
-          <img className="user-avatar" alt="user avatar" src={user.avatarURL} />
-        </div>
-      );
-    }
-    return <h1>Hello, <span className="impressive-text">Stranger</span>!</h1>
-  }
-
-  handleClock = (event) => {
-    event.target.classList.toggle('pressed');
-    this.setState(state => ({
-      showClock: !state.showClock,
-    }));
-
-  }
-
+class App extends React.Component {
   
-  render() {
-    const element = <Welcome name={this.formatName(this.props.user)} />
-    const names = ['Dmitry', 'Yegor', 'Yaroslav', 'Lada'];
-    const renderClock = () => {
-        if (this.state.showClock) return <Clock />;
-      }
 
+  render() {
     return (
       <div className="app">
         <LoginControl />
-
-        <Toggle
-          name="Show Clock"
-          isToggleOn={this.state.showClock}
-          onClick={this.handleClock}
-          renderComponent={renderClock}
-        />
-
+        <Clock />
         <Page />
 
-
-        {this.getGreeting(this.props.user)}
-
-        {element}
-        <Welcome name={this.formatName(this.props.user)} />
-
-        <ul>
-          {names.map((name, i) => <li key={i}><Welcome name={name} /></li>)}
-        </ul>
+        <Welcome user={this.props.user} />
 
         <Comment
           author={this.props.user}
@@ -124,3 +86,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;

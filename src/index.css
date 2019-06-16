@@ -36,7 +36,7 @@ body {
 
 button {
   display: block;
-  min-width: 50px;
+  min-width: 70px;
   font-weight: bold;
   outline: none;
   border: 2px solid var(--main-text-color);
@@ -55,4 +55,8 @@ button.pressed {
   background-color: var(--warning-backround-color);
   border: 2px solid var(--warning-border-color);
   border-radius: 5px;
+}
+
+.hidden {
+  display: none;
 }
