@@ -36,6 +36,7 @@ body {
 
 .greetings {
   display: flex;
+  justify-content: center;
   text-align: center;
 }
 

@@ -1,13 +1,13 @@
 import React from 'react';
 
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
+import * as helpers from '../helpers';
+
+
 
 function UserGreeting(props) {
   return (
     <div className="greetings">
-      <h1>Hello, <span className="impressive-text">{formatName(props.user)}</span>!</h1>
+      <h1>Hello, <span className="impressive-text">{helpers.formatName(props.user)}</span>!</h1>
       <img className="user-avatar" alt="user avatar" src={props.user.avatarURL} />
     </div>
   );
@@ -18,8 +18,6 @@ function GuestGreeting(props) {
     <div className="greetings">
       <div>
         <h1>Hello, <span className="impressive-text">Stranger</span>!</h1>
-      </div>
-      <div>
         <p>Please sign up.</p>
       </div>
     </div>
