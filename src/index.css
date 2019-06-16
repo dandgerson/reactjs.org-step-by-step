@@ -103,3 +103,7 @@ button.pressed {
   padding: 0;
   padding-bottom: 10px;
 }
+
+.post-status {
+  font-style: oblique;
+}

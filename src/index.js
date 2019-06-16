@@ -10,18 +10,30 @@ import App from './components/App';
 const posts = [
   {
     id: shortid.generate(),
+    author: {
+      firstName: 'Dmitry G.',
+      lastName: 'Anderson',
+    },
     title: 'Laboris ex officia laborum.',
     content: 'Ut cillum do sit elit ipsum esse laboris non do nostrud adipisicing mollit cupidatat minim. Qui ex quis eu duis ullamco. Pariatur cupidatat esse cillum mollit ullamco in.',
     date: new Date(),
   },
   {
     id: shortid.generate(),
+    author: {
+      firstName: 'Dmitry G.',
+      lastName: 'Anderson',
+    },
     title: 'Magna adipisicing occaecat.',
     content: 'Duis sunt veniam esse mollit. Consequat fugiat minim sint aliquip. Aute reprehenderit tempor occaecat enim sint eu ad anim culpa quis Lorem nostrud. Velit aliquip do culpa consectetur proident cillum. Anim incididunt anim sint dolor culpa minim culpa excepteur deserunt in adipisicing. Consectetur amet quis qui ullamco qui elit. Consequat cillum incididunt ea deserunt mollit qui aliquip eiusmod quis est.',
     date: new Date(),
   },
   {
     id: shortid.generate(),
+    author: {
+      firstName: 'Dmitry G.',
+      lastName: 'Anderson',
+    },
     title: 'Sit ea nulla velit.',
     content: 'Dolore irure sit culpa ex reprehenderit. Enim occaecat fugiat est do aute. Velit ad irure non eiusmod eiusmod tempor nulla reprehenderit eiusmod consectetur velit consectetur. Ullamco culpa veniam do fugiat Lorem qui dolor excepteur ipsum dolor elit ex est. Sint quis cillum laborum occaecat exercitation id cupidatat exercitation.',
     date: new Date(),

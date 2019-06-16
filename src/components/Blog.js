@@ -6,7 +6,10 @@ function Post(props) {
   return (
     <div className="post">
       <h3>{props.post.title}</h3>
-      <span>Date: {helpers.formateDate(props.post.date)}</span>
+      <div className="post-status">
+        <span>Author: {helpers.formatName(props.post.author)}</span><br />
+        <span>Date: {helpers.formateDate(props.post.date)}</span>
+      </div>
       <p>{props.post.content}</p>
     </div>
   );
