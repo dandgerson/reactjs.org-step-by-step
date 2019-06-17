@@ -27,23 +27,26 @@ function Blog(props) {
   );
 
   return (
-    <div className="blog">
-      <div className="sidebar">
-        <h2>Sidebar</h2>
-        <ul>
-          {sidebar}
-        </ul>
+    <div className="row" >
+      <div className="col-9">
+        <div>
+          <h2>Posts</h2>
+          {props.user.posts.map(post => (
+            <Post
+              key={post.id}
+              id={post.id}
+              post={post}
+              author={props.user} />)
+          )}
+        </div>
       </div>
-      <hr />
-      <div>
-        <h2>Posts</h2>
-        {props.user.posts.map(post => (
-          <Post
-            key={post.id}
-            id={post.id}
-            post={post}
-            author={props.user} />)
-        )}
+      <div className="col order-first">
+        <div className="sidebar">
+          <h2>Sidebar</h2>
+          <ul>
+            {sidebar}
+          </ul>
+        </div>
       </div>
     </div>
   );

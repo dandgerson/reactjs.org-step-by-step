@@ -12,11 +12,23 @@ class App extends React.Component {
     return (
       <div className="container">
         <header>
-          <LoginControl user={this.props.users[0]}/>
-          <Clock />
+          <div className="row justify-content-center">
+            <div className="col">
+              <LoginControl user={this.props.users[0]}/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <Clock />
+            </div>
+          </div>
         </header>
         <main>
-          <Page />
+          <div className="row">
+            <div className="col">
+              <Page />
+            </div>
+          </div>
           <Blog user={this.props.users[0]}/>
           <CommentsList users={this.props.users} />
         </main>

@@ -28,12 +28,12 @@ function AuthorInfo(props) {
 
 function Comment(props) {
   return (
-    <div className="Comment">
+    <div className="comment">
       <AuthorInfo author={props.author}/>
-      <div className="Comment-text">
+      <div className="comment-text">
         {props.text}
       </div>
-      <div className="Comment-date">
+      <div className="comment-date">
         {helpers.formateDate(props.date)}
       </div>
     </div>
