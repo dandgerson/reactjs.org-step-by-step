@@ -17,7 +17,7 @@ class App extends React.Component {
         </header>
         <main>
           <Page />
-          <Blog posts={this.props.posts}/>
+          <Blog user={this.props.users[0]}/>
           <CommentsList users={this.props.users} />
         </main>
       </div>
