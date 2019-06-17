@@ -1,13 +1,18 @@
 import React from 'react';
 
+import EssayForm from './EssayForm';
+
 function WarningBanner(props) {
   if (!props.warn) {
     return null;
   }
 
   return (
-    <div className="warning">
-      Warning!
+    <div>
+      <div className="warning">
+        Warning!
+      </div>
+      <EssayForm />
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React from 'react';
 
 import * as helpers from '../helpers';
 
+import NameForm from './NameForm';
+
 
 
 function UserGreeting(props) {
@@ -19,6 +21,7 @@ function GuestGreeting(props) {
       <div>
         <h1>Hello, <span className="impressive-text">Stranger</span>!</h1>
         <p>Please sign up.</p>
+        <NameForm />
       </div>
     </div>
   );
@@ -48,7 +51,7 @@ function LogoutButton(props) {
   );
 }
 
-export default class LoginControl extends React.Component {
+class LoginControl extends React.Component {
   constructor(props) {
     super(props);
 
@@ -81,3 +84,5 @@ export default class LoginControl extends React.Component {
     );
   }
 }
+
+export default LoginControl;

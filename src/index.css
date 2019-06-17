@@ -51,7 +51,7 @@ body {
   padding: 10px;
 }
 
-.Comment .UserInfo-name {
+.Comment .author-info--name {
   text-align: center;
 }
 
