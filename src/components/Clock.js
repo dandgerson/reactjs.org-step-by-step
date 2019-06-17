@@ -1,13 +1,10 @@
 import React from 'react';
 
-import Toggle from './Toggle';
-
 class Clock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       date: new Date(),
-      show: true,
     };
   }
 
@@ -25,20 +22,9 @@ class Clock extends React.Component {
     });
   }
 
-  handleClick = (e) => {
-    this.setState(state => ({show: !state.show}));
-
-    const DOMclock = e.target.parentElement.querySelector('.clock');
-    DOMclock.hidden = !DOMclock.hidden;
-  }
-
   render() {
     return (
       <div>
-        <Toggle
-          isToggleOn={this.state.show}
-          onClick={this.handleClick}
-        />
         <span className="clock">{this.state.date.toLocaleTimeString('ru')}</span>
       </div>
     );

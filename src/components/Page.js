@@ -12,7 +12,6 @@ function WarningBanner(props) {
       <div className="warning">
         Warning!
       </div>
-      <EssayForm />
     </div>
   );
 }
@@ -38,6 +37,7 @@ export default class Page extends React.Component {
           {this.state.showWarning ? 'Hide' : 'Show'}
         </button>
         <WarningBanner warn={this.state.showWarning}/>
+        <EssayForm />
       </div>
     );
   }

@@ -1,0 +1,31 @@
+.greetings {
+  padding-top: 20px;
+}
+
+.avatar {
+  display: block;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.sidebar {
+  ul {
+    padding-left: 10px;
+    li:not(:first-child) {
+      padding-top: 10px;
+    }
+  }
+}
+
+.post {
+  .status {
+    padding: 10px 0;
+  }
+}
+
+.comments-container {
+  padding-top: 10px;
+  .author-info-container {
+    height: 100%;
+  }
+}

@@ -8,19 +8,25 @@ import NameForm from './NameForm';
 
 function UserGreeting(props) {
   return (
-    <div className="greetings">
-      <h1>Hello, <span className="impressive-text">{helpers.formatName(props.user)}</span>!</h1>
-      <img className="user-avatar" alt="user avatar" src={props.user.avatarURL} />
+    <div className="row d-flex justify-content-center align-items-center greetings">
+      <div className="col-9">
+        <h1>Hello, <span className="impressive-text">{helpers.formatName(props.user)}</span>!</h1>
+      </div>
+      <div className="col-3">
+        <img className="avatar rounded-circle" alt="user avatar" src={props.user.avatarURL} />
+      </div>
     </div>
   );
 }
 
 function GuestGreeting(props) {
   return (
-    <div className="greetings">
-      <div>
+    <div className="row d-flex flex-column justify-content-center align-items-center greetings">
+      <div className="col">
         <h1>Hello, <span className="impressive-text">Stranger</span>!</h1>
-        <p>Please sign up.</p>
+      </div>
+      <div className="col">
+        <p className=".small">Please sign up.</p>
         <NameForm />
       </div>
     </div>
@@ -71,15 +77,16 @@ class LoginControl extends React.Component {
 
   render() {
     const isLoggedIn = this.state.isLoggedIn;
+    const renderLoginButton = () => isLoggedIn ? (
+        <LogoutButton onClick={this.handleLogoutClick} />
+      ) : (
+        <LoginButton onClick={this.handleLoginClick} />
+      )
 
     return (
-      <div>
+      <div className="text-center">
         <Greeting isLoggedIn={isLoggedIn} user={this.props.user}/>
-        {isLoggedIn ? (
-          <LogoutButton onClick={this.handleLogoutClick} />
-        ) : (
-          <LoginButton onClick={this.handleLoginClick} />
-        )}
+        {renderLoginButton()}
       </div>
     );
   }
