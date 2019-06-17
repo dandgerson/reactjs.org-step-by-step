@@ -3,13 +3,13 @@ const path = require('path');
 
 
 // fs.watch(
-  //   path.join(__dirname, 'data.js'),
-  //   (eventType, filename) => {
-    //     if (eventType === 'change') updateData();
-    //     console.log(eventType);
-    //   }
-    // );
-    
+//   path.join(__dirname, 'data.js'),
+//   (eventType, filename) => {
+//     if (eventType === 'change') updateData();
+//     console.log(eventType);
+//   }
+// );
+
 function updateData() {
   const data = require('./data');
 
