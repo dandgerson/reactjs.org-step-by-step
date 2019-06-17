@@ -16,7 +16,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "up-data": "node src/json-data-emulator"
+    "update-json": "node src/data-generator"
   },
   "eslintConfig": {
     "extends": "react-app"
