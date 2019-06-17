@@ -1,8 +1,18 @@
-export function updateData() {
-  const fs = require('fs');
-  const path = require('path');
+const fs = require('fs');
+const path = require('path');
+
+fs.watch(
+  path.join(__dirname, 'data.js'),
+  (eventType, filename) => {
+    if (eventType === 'change') updateData();
+    console.log(eventType);
+  }
+);
+
+function updateData() {
 
   const data = require('./data');
+
 
   fs.writeFile(
     path.join(__dirname, 'data.json'),
@@ -11,10 +21,10 @@ export function updateData() {
   );
 }
 
-export function formateDate(date) {
-  return date.toLocaleString('ru');
-}
+// export function formateDate(date) {
+//   return date.toLocaleString('ru');
+// }
 
-export function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
+// export function formatName(user) {
+//   return user.firstName + ' ' + user.lastName;
+// }
