@@ -14,7 +14,6 @@ function Avatar(props) {
 }
 
 function AuthorInfo(props) {
-  console.log(props);
   return (
     <div className="author-info">
       <Avatar author={props.author} />
