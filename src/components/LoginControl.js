@@ -34,59 +34,33 @@ function GuestGreeting(props) {
 }
 
 function Greeting(props) {
-  const isLoggedIn = props.isLoggedIn;
-  if (isLoggedIn) {
-    return <UserGreeting user={props.user} />;
-  }
-  return <GuestGreeting user={props.user} />;
-}
-
-function LoginButton(props) {
-  return (
-    <button onClick={props.onClick}>
-      Login
-    </button>
-  );
-}
-
-function LogoutButton(props) {
-  return (
-    <button className="pressed" onClick={props.onClick}>
-      Logout
-    </button>
-  );
+  return props.isLoggedIn ?
+    <UserGreeting user={props.user} /> :
+    <GuestGreeting user={props.user} />;
 }
 
 class LoginControl extends React.Component {
   constructor(props) {
     super(props);
-
-    this.handleLoginClick = this.handleLoginClick.bind(this);
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
-
     this.state = {isLoggedIn: false};
   }
 
-  handleLoginClick(e) {
-    this.setState({isLoggedIn: true});
-  }
-  
-  handleLogoutClick(e) {
-    this.setState({isLoggedIn: false});
-  }
+  handleClick = () => this.setState({isLoggedIn: !this.state.isLoggedIn})
 
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    const renderLoginButton = () => isLoggedIn ? (
-        <LogoutButton onClick={this.handleLogoutClick} />
-      ) : (
-        <LoginButton onClick={this.handleLoginClick} />
-      )
-
     return (
       <div className="text-center">
-        <Greeting isLoggedIn={isLoggedIn} user={this.props.user}/>
-        {renderLoginButton()}
+        <Greeting isLoggedIn={this.state.isLoggedIn} user={this.props.user}/>
+        <div className="row">
+          <div className="col">
+            <button
+              className="login-button btn btn-outline-secondary"
+              type="button"
+              onClick={this.handleClick}>
+              {this.state.isLoggedIn ? 'Logout' : 'Login'}
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

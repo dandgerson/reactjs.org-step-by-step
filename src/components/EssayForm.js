@@ -20,15 +20,18 @@ class EssayForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Essay:
-          <textarea
+      <div className="row">
+        <div className="col">
+          <textarea className="form-control"
             value={this.state.value}
             onChange={this.handleChange} />
-        </label>
-        <input
-          type="submit"
-          value="Submit" />
+        </div>
+        <div className="col">
+          <input className="form-control"
+            type="submit"
+            value="Submit" />
+        </div>
+      </div>
       </form>
     );
   }

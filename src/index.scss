@@ -2,26 +2,42 @@
   padding-top: 20px;
 }
 
+.login-button {
+  margin-top: 10px;
+}
+
 .avatar {
   display: block;
   max-height: 100px;
   max-width: 100px;
 }
 
-.sidebar {
-  ul {
-    padding-left: 10px;
-    li:not(:first-child) {
-      padding-top: 10px;
+.page-container {
+  padding-top: 10px;
+  textarea {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+.blog-container {
+  padding-top: 10px;
+  .sidebar {
+    ul {
+      padding-left: 10px;
+      li:not(:first-child) {
+        padding-top: 10px;
+      }
+    }
+  }
+  
+  .post {
+    .status {
+      padding: 10px 0;
     }
   }
 }
 
-.post {
-  .status {
-    padding: 10px 0;
-  }
-}
 
 .comments-container {
   padding-top: 10px;

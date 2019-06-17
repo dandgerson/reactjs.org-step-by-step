@@ -19,22 +19,21 @@ class NameForm extends React.Component {
 
   render() {
     return (
-      <div>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-              />
-          </label>
-          <input
-            type="submit"
-            value="Submit" />
+          <div className="form-row">
+            <div className="col-8">
+                <input className="form-control"
+                  type="text"
+                  value={this.state.value}
+                  placeholder="Username"
+                  onChange={this.handleChange}
+                  />
+            </div>
+            <div className="col-4">
+              <button className="form-control text-center" type="submit">Sing Up</button>
+            </div>
+          </div>
         </form>
-      </div>
-
     );
   }
 }

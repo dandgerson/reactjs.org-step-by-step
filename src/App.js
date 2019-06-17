@@ -1,6 +1,5 @@
 import React from 'react';
 
-// components
 import LoginControl from './components/LoginControl';
 import Clock from './components/Clock';
 import Page from './components/Page'
@@ -20,14 +19,13 @@ class App extends React.Component {
           </div>
         </header>
         <main>
-          <div className="row">
-            <div className="col">
-              <Page />
-            </div>
-          </div>
+          <Page />
           <Blog user={this.props.users[0]}/>
           <Comments users={this.props.users} />
         </main>
+        <footer className="text-right">
+          <span className="small">Powered by Create React App</span>
+        </footer>
       </div>
     );
   }

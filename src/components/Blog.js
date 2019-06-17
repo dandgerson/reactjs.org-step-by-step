@@ -41,13 +41,15 @@ function Blog(props) {
   );
 
   return (
-    <div className="row" >
-      <div className="col-8">
-        <h2>Posts</h2>
-        {posts}
-      </div>
-      <div className="col-4 order-first">
-        <Sidebar posts={props.user.posts}/>
+    <div className="blog-container">
+      <div className="row" >
+        <div className="col-8">
+          <h2>Posts</h2>
+          {posts}
+        </div>
+        <div className="col-4 order-first">
+          <Sidebar posts={props.user.posts}/>
+        </div>
       </div>
     </div>
   );

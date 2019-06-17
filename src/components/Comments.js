@@ -31,7 +31,7 @@ function Comment(props) {
         <p>{props.text}</p>
       </div>
       <div className="col-2">
-        {helpers.formateDate(props.date)}
+        <span className="font-italic small">{helpers.formateDate(props.date)}</span>
       </div>
     </div>
   );
