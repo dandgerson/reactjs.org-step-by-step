@@ -1,8 +1,13 @@
-import fs from 'fs';
+const shortid = require('shortid');
 
-import shortid from 'shortid';
+exports.test = {
+  test: 'test',
+  test1: 'test1',
+  test2: 'test2',
+  test3: 'test3',
+}
 
-export const users = [
+exports.users = [
   {
     firstName: 'Dmitry G.',
     lastName: 'Anderson',
