@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/reactjs.org-step-by-step/static/css/main.bcad834f.chunk.css",
-    "main.js": "/reactjs.org-step-by-step/static/js/main.961383ce.chunk.js",
-    "main.js.map": "/reactjs.org-step-by-step/static/js/main.961383ce.chunk.js.map",
+    "main.css": "/reactjs.org-step-by-step/static/css/main.5c79b35d.chunk.css",
+    "main.js": "/reactjs.org-step-by-step/static/js/main.f15b4783.chunk.js",
+    "main.js.map": "/reactjs.org-step-by-step/static/js/main.f15b4783.chunk.js.map",
     "runtime~main.js": "/reactjs.org-step-by-step/static/js/runtime~main.e095d52c.js",
     "runtime~main.js.map": "/reactjs.org-step-by-step/static/js/runtime~main.e095d52c.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/reactjs.org-step-by-step/static/css/2.22a7d4ef.chunk.css",
     "static/js/2.ff7fefb1.chunk.js": "/reactjs.org-step-by-step/static/js/2.ff7fefb1.chunk.js",
     "static/js/2.ff7fefb1.chunk.js.map": "/reactjs.org-step-by-step/static/js/2.ff7fefb1.chunk.js.map",
     "index.html": "/reactjs.org-step-by-step/index.html",
-    "precache-manifest.00d485d9cd42b260391689988e5aaefa.js": "/reactjs.org-step-by-step/precache-manifest.00d485d9cd42b260391689988e5aaefa.js",
+    "precache-manifest.3e4a75ba5ab79b139655d46e7f33027b.js": "/reactjs.org-step-by-step/precache-manifest.3e4a75ba5ab79b139655d46e7f33027b.js",
     "service-worker.js": "/reactjs.org-step-by-step/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/reactjs.org-step-by-step/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.bcad834f.chunk.css.map": "/reactjs.org-step-by-step/static/css/main.bcad834f.chunk.css.map"
+    "static/css/main.5c79b35d.chunk.css.map": "/reactjs.org-step-by-step/static/css/main.5c79b35d.chunk.css.map"
   }
 }
