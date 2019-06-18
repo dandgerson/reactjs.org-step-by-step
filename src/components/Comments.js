@@ -12,9 +12,11 @@ function Avatar(props) {
 
 function AuthorInfo(props) {
   return (
-    <div className="author-info-container d-flex flex-column justify-content-center align-items-center">
-      <Avatar author={props.author} />
-      <div className="font-italic font-weight-bold small text-center">
+    <div className="row">
+      <div className="col">
+        <Avatar author={props.author} />
+      </div>
+      <div className="col font-italic font-weight-bold small text-center">
           {helpers.formatName(props.author)}
       </div>
     </div>
@@ -24,7 +26,7 @@ function AuthorInfo(props) {
 function Comment(props) {
   return (
     <div className="row">
-      <div className="col-3">
+      <div className="col-3 d-flex align-items-start">
         <AuthorInfo author={props.author}/>
       </div>
       <div className="col-7">
