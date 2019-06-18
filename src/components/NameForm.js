@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as helpers from '../helpers';
+// import * as helpers from '../helpers';
 
 class NameForm extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class NameForm extends React.Component {
   }
   
   handleSubmit = (event) => {
-    console.log('JSON-data updates...');
+    console.log('JSON-data updates with... ' + this.state.value);
     event.preventDefault();
   }
 
@@ -22,15 +22,17 @@ class NameForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-row">
             <div className="col-8">
-                <input className="form-control"
-                  type="text"
-                  value={this.state.value}
-                  placeholder="Username"
-                  onChange={this.handleChange}
-                  />
+              <input className="form-control"
+                type="text"
+                value={this.state.value}
+                placeholder="Username"
+                onChange={this.handleChange}
+                />
             </div>
             <div className="col-4">
-              <button className="form-control text-center" type="submit">Sing Up</button>
+              <input className="form-control text-center"
+                type="submit"
+                value="Sing Up" />
             </div>
           </div>
         </form>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import EssayForm from './EssayForm';
-
+import FlavorForm from './FlavorForm';
 export default class Page extends React.Component {
   render() {
     return (
@@ -16,6 +16,7 @@ export default class Page extends React.Component {
             <EssayForm />
           </div>
         </div>
+        <FlavorForm />
       </div>
     );
   }
