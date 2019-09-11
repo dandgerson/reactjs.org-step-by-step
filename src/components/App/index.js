@@ -1,10 +1,10 @@
 import React from 'react';
 
-import LoginControl from './components/LoginControl';
-import Clock from './components/Clock';
-import Page from './components/Page'
-import Blog from './components/Blog';
-import Comments from './components/Comments';
+import LoginControl from './LoginControl';
+import Clock from './Clock';
+import Page from './Page'
+import Blog from './Blog';
+import Comments from './Comments';
 
 class App extends React.Component {
   render() {

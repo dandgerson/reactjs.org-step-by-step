@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as helpers from '../helpers';
+import * as helpers from '../../../helpers';
 
 import NameForm from './NameForm';
 

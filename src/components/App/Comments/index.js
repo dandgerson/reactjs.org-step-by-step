@@ -1,5 +1,5 @@
 import React from 'react';
-import * as helpers from '../helpers';
+import * as helpers from '../../../helpers';
 
 function Avatar(props) {
   return (
