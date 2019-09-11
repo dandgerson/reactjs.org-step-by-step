@@ -2,6 +2,7 @@ import React from 'react';
 
 import LoginControl from './LoginControl';
 import Clock from './Clock';
+import Calculator from './Calculator'
 import Page from './Page'
 import Blog from './Blog';
 import Comments from './Comments';
@@ -20,6 +21,7 @@ class App extends React.Component {
         </header>
         <main>
           <Page />
+          <Calculator />
           <Blog user={this.props.users[0]}/>
           <Comments users={this.props.users} />
         </main>
