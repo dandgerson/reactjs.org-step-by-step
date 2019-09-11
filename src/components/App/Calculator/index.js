@@ -53,12 +53,12 @@ export default class Calculator extends Component {
         <TemperatureInput
           scale='c'
           temperature={celsius}
-          onTemperatureChange={this.handleCelsiusChange}
+          handleChange={this.handleCelsiusChange}
         />
         <TemperatureInput
           scale='f'
           temperature={fahrenheit}
-          onTemperatureChange={this.handleFahrenheitChange}
+          handleChange={this.handleFahrenheitChange}
         />
 
         <BoilingVerdict celsius={celsius} />
